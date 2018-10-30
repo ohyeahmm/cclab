@@ -1,21 +1,67 @@
 <!DOCTYPE html>
-<html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("p").click(function(){
-        $(this).hide();
-    });
-});
-</script>
+	<title>The Magic Place</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
 
-<p>If you click on me, I will disappear.</p>
-<p>Click me away!</p>
-<p>Click me too!</p>
+<div id="wrapper">
+	<h1>The Magic Place</h1>
 
+
+
+	<!-- Speech Bubble -->
+	<p id="speech">Make a wish! It will come true!</p>
+			
+	<!-- Ask Question Form -->	
+	<div id="questionForm">
+	<form>
+	<input type="text" id="question" placeholder="Type your wishes here." />
+	<div id="submit">Send the wish Away</div>
+
+ <h3>scroll down to see your wishes have been sending out</h3>
+	</form>
+	</div>
+</div>
+	
+<!-- Linking Scripts -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
+
+<style>
+.triangle{
+	stroke-dasharray: 17;
+	animatin: dash 2.5s cubic-bezier(0.35,0.04,0.63,0.95)infinite;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 136;
+	}
+}
+
+	.sending{
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 7px;
+	animation: blink .9s ease-in-out infinite;
+}
+
+@keyframes blink {
+	50%
+	 opacity: 0;
+}
+}
+
+
+
+</style>
+
+<svg width= "200" height = "200" viewBox="0 0 40 60">
+	<polygon class="traingle" fill="none" stroke="#000" stroke-witdth="1" points="16,1 32,32"/ >
+		<text class="sending" x="0" y="45" fill="#000"> Sending...</text>
+	</svg>
+
+<!-- your script link -->
 
 </body>
 </html>
